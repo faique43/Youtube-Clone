@@ -7,14 +7,18 @@ import { demoThumbnailUrl, demoVideoTitle, demoChannelTitle, demoChannelUrl, dem
 
 const VideoCard = ({
   video: {
-    id: {videoId},
-    snippet
-  }
+    id: { videoId },
+    snippet,
+  },
 }) => {
-    console.log(snippet.title);
-    
   return (
-    <Card>
+    <Card
+      sx={{
+        width: { md: "300px", xs: "100%" },
+        boxShadow: "none",
+        borderRadius: 0,
+      }}
+    >
       <Link to={videoId ? `/video/${videoId}` : demoVideoUrl}>
         <CardMedia
           image={snippet?.thumbnails?.high?.url}
@@ -37,7 +41,7 @@ const VideoCard = ({
         >
           <Typography variant="subtitle2" fontWeight="bold" color="gray">
             {snippet?.channelTitle || demoChannelTitle}
-            <CheckCircle sx={{ fontsize: 12, color: "gray", ml: 5 }} />
+            <CheckCircle sx={{ fontSize: 12, color: "gray", ml: "5px" }} />
           </Typography>
         </Link>
       </CardContent>
@@ -45,4 +49,4 @@ const VideoCard = ({
   );
 };
 
-export default VideoC
+export default VideoCard
