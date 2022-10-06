@@ -9,7 +9,7 @@ const VideoCard = ({
   video: {
     id: { videoId },
     snippet,
-  },
+  }, width
 }) => {
   return (
     <Card
