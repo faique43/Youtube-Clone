@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
+import ReactPlayer from "react-player";
+import { Typography, Stack, Box } from "@mui/material";
+import { CheckCircle } from "@mui/icons-material";
+
+import { VideoCard } from "./";
+import { fetchFromAPI } from "../utils/fetchFromAPI";
 
 const VideoDetail = () => {
   return (
-    <div>
-      
-    </div>
-  )
-}
+    <Box minHeight="95vh">
+      <Stack direction={{ xs: 'colummn', md: 'row'}}>
 
-export default VideoDetail
+      </Stack>
+    </Box>
+  );
+};
+
+export default VideoDetail;
